@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6fd4044a87.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Tela login</title>
+  </head>
+  <body>
+    <div class="conteudo">
+      <div class="img">
+        <img
+          src="./img/casa-flores.jpg"
+          alt="imagem de login-casa com flores"
+        />
+      </div>
+      <div class="login">
+        <h2>Login</h2>
+
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" />
+        <label for="passaword">password</label>
+        <div class="senha">
+          <input type="password" name="password" id="password" />
+          <span class="lnr lnr-eye">
+            <i class="fa-solid fa-eye"></i>
+          </span>
+        </div>
+
+        <div class="links">
+          <a href="#">forgot password?</a>
+          <a href="#"> sign Up</a>
+        </div>
+
+        <div class="btns">
+          <button class="btn">Enter</button>
+          <button class="facebook">
+            <i class="fa-brands fa-facebook-f"> </i>
+            <span>Login with Facebook</span>
+          </button>
+
+          <button class="instagram">
+            <i class="fa-brands fa-instagram"> </i>
+            <span>Login With Instagran</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let btn = document.querySelector(".lnr-eye");
+
+      btn.addEventListener("click", function () {
+        let input = document.querySelector("#password");
+
+        if (input.getAttribute("type") == "password") {
+          input.setAttribute("type", "text");
+        } else {
+          input.setAttribute("type", "password");
+        }
+      });
+    </script>
+  </body>
+</html>
